@@ -8,8 +8,9 @@ This project uses Hadoop to process a movie dataset (https://files.grouplens.org
 
 ## Prerequisites
 1. Set up Hadoop using the provided Docker Compose file:
-   ```bash
-   docker-compose up -d
+```bash
+docker-compose up -d
+```
 
 2. Upload movies.csv and ratings.csv to HDFS:
 ```bash
