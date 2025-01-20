@@ -30,6 +30,12 @@ or use the precompiled .jar available under Releases.
 
 ## Execution
 Inside the namenode container, go to /hadoop/labs/target.
+```bash
+docker exec -it namenode bash
+```
+```bash
+cd /hadoop/labs/target
+```
 
 1. Identify Highest-Rated Movie for Each User:
 ```bash
@@ -49,4 +55,9 @@ hadoop jar hadoop-1.0-SNAPSHOT.jar org.ziyad.hadoop.MovieTitleListByLikedCount
 ```
 Output: /output5/part-r-00000
 
-(Note: to be executed sequentially as a step's output is another's input)
+Executions must be in sequential order, as a step's output is another's input.
+
+To visualize the outputs, run: 
+```bash
+hadoop fs -text /output<X>/part-r-00000
+```
